@@ -7,7 +7,7 @@
 * Ілля Теслюк - Scrum Master
 * Ярослав Бай a.k.a mightyYaroslav - TeamLead
 * Михайло Лук'янець - QA
-* Таня Рябоконь - Progrmmer
+* Таня Рябоконь - Programmer
 
 [Trello](https://trello.com/b/XTGvnfa2/quadrocopter-project)
 
