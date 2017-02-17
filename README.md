@@ -8,9 +8,10 @@
 * Ярослав Бай a.k.a mightyYaroslav - TeamLead
 * Михайло Лук'янець - QA
 * Таня Рябоконь - Progrmmer
-#### [Trello](https://trello.com/b/XTGvnfa2/quadrocopter-project)
+
+[Trello](https://trello.com/b/XTGvnfa2/quadrocopter-project)
 
 
 #Project Quadro
-## (Description was stolen
+## (Description was stolen)
 ####[Documentation](https://docs.google.com/document/d/1-RFvluZsk-pI2bkxTMO4GHAuLf_YTlzBvsP4dq3NmGI/edit)
