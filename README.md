@@ -13,4 +13,4 @@
 
 #Project Quadro
 ## (Description was stolen
-####[Documentation]() - ссылка на док должны быть тут
+####[Documentation](https://docs.google.com/document/d/1-RFvluZsk-pI2bkxTMO4GHAuLf_YTlzBvsP4dq3NmGI/edit)
