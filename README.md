@@ -1,6 +1,5 @@
 ﻿# Team Quadro
 
-![Logo](http://www.gizmonews.ru/wp-content/uploads/2012/06/flying-cat-1.jpg)
 
 ### The Team
 * Дмитро Пінтак - Project Owner
