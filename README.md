@@ -1,6 +1,6 @@
 ﻿# Team Quadro
 
-![alt tag](https://github.com/mightyYaroslav/groupdynamics/blob/master/Quadro logo.jpg)
+![alt tag](https://github.com/mightyYaroslav/groupdynamics/blob/logo/Quadro%20logo.jpg)
 
 ### The Team
 * Дмитро Пінтак - Project Owner
