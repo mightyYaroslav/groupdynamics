@@ -2,46 +2,46 @@
 <items version="2" >
 
     <item
-        jar="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jar="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
         jumboMode="true"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-21.0.3_f69276df59fb2743706a02d4028579cd99f835c3/classes.dex" />
+        <dex dex="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-21.0.3_8ae6c1e1722eda4723644091bb0343baccdd49fb.jar" />
     </item>
     <item
-        jar="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
         jumboMode="true"
         revision="21.1.2"
-        sha1="db54a1b41d5c0e1cedbd9fc98baafa9791306447">
-        <dex dex="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4ac5ae44b88c3b9badd31afbb0b22f6ba27a870f/classes.dex" />
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3_cf79d7c99b2c2ab8b516c7e481f10116ebbb0fb5.jar" />
+    </item>
+    <item
+        jar="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="eec8268fbdb71fdad7ca9ecac35471e8ac5310c6">
+        <dex dex="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/pre-dexed/debug/instant-run_e3dde8abc1a18f960af96b78844698409521671d.jar" />
     </item>
     <item
         jar="/Users/Yaroslav/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="true"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-21.0.3_2105b999d17fd1ecccb241adae3a2da22fb55812/classes.dex" />
+        <dex dex="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3_2105b999d17fd1ecccb241adae3a2da22fb55812.jar" />
     </item>
     <item
-        jar="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="21.1.2"
-        sha1="b1ca81d8774aaed60136f8e14f28693bd12a44a3">
-        <dex dex="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ee426528a89e9b28c795692c94067ca3901845bb/classes.dex" />
+        sha1="da1f20513ab06475797ad72afc13229be2aff8a9">
+        <dex dex="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_fad82749171d2b92b55036ebfdce32ad3ee6277a.jar" />
     </item>
     <item
-        jar="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
-        jumboMode="true"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-21.0.3_e7ef22bce7a96e1e48fcd950c921434d503058b4/classes.dex" />
-    </item>
-    <item
-        jar="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jar="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
         jumboMode="true"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/Yaroslav/AndroidStudioProjects/LED/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-21.0.3_6a778f126414020509f20a6feb59ab7c99cd1768/classes.dex" />
+        <dex dex="/Users/Yaroslav/Documents/Programming/groupdynamics/Android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-21.0.3_4a10808d13fc87c630a30780a69b3010ac2a283b.jar" />
     </item>
 
 </items>

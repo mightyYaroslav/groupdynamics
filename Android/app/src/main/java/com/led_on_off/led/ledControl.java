@@ -1,5 +1,7 @@
 package com.led_on_off.led;
 
+import android.content.Context;
+import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,7 +24,7 @@ import java.util.UUID;
 public class ledControl extends ActionBarActivity {
 
    // Button btnOn, btnOff, btnDis;
-    Vibrator v = (Vibrator) this.context.getSystemService(Context.VIBRATOR_SERVICE);
+    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
     ImageButton On, Off, Discnt, Abt;
     String address = null;
     private ProgressDialog progress;
@@ -58,7 +60,7 @@ public class ledControl extends ActionBarActivity {
             public void onClick(View v)
             {
                 turnOnLed();
-                v.vibrate(5000);
+                vibrator.vibrate(5000);
             }
         });
 
@@ -67,7 +69,7 @@ public class ledControl extends ActionBarActivity {
             public void onClick(View v)
             {
                 turnOffLed();
-                v.vibrate(5000);
+                vibrator.vibrate(5000);
             }
         });
 
