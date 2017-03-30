@@ -22,6 +22,7 @@ import java.util.UUID;
 public class ledControl extends ActionBarActivity {
 
    // Button btnOn, btnOff, btnDis;
+    Vibrator v = (Vibrator) this.context.getSystemService(Context.VIBRATOR_SERVICE);
     ImageButton On, Off, Discnt, Abt;
     String address = null;
     private ProgressDialog progress;
@@ -56,7 +57,8 @@ public class ledControl extends ActionBarActivity {
             @Override
             public void onClick(View v)
             {
-                turnOnLed();      //method to turn on
+                turnOnLed();
+                v.vibrate(5000);
             }
         });
 
@@ -64,7 +66,8 @@ public class ledControl extends ActionBarActivity {
             @Override
             public void onClick(View v)
             {
-                turnOffLed();   //method to turn off
+                turnOffLed();
+                v.vibrate(5000);
             }
         });
 
