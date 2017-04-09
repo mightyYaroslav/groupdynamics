@@ -22,7 +22,6 @@ import java.util.Set;
 public class DeviceList extends ActionBarActivity
 {
     //widgets
-    Button btnPaired;
     ListView devicelist;
     //Bluetooth
     private BluetoothAdapter myBluetooth = null;
@@ -36,7 +35,6 @@ public class DeviceList extends ActionBarActivity
         setContentView(R.layout.activity_device_list);
 
         //Calling widgets
-        btnPaired = (Button)findViewById(R.id.button);
         devicelist = (ListView)findViewById(R.id.listView);
 
         //if the device has bluetooth
@@ -56,15 +54,7 @@ public class DeviceList extends ActionBarActivity
                 Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(turnBTon,1);
         }
-
-        btnPaired.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                pairedDevicesList();
-            }
-        });
-
+        pairedDevicesList();
     }
 
     private void pairedDevicesList()
@@ -73,16 +63,10 @@ public class DeviceList extends ActionBarActivity
         ArrayList list = new ArrayList();
 
         if (pairedDevices.size()>0)
-        {
             for(BluetoothDevice bt : pairedDevices)
-            {
                 list.add(bt.getName() + "\n" + bt.getAddress()); //Get the device's name and the address
-            }
-        }
         else
-        {
             Toast.makeText(getApplicationContext(), "No Paired Bluetooth Devices Found.", Toast.LENGTH_LONG).show();
-        }
 
         final ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1, list);
         devicelist.setAdapter(adapter);
@@ -99,10 +83,10 @@ public class DeviceList extends ActionBarActivity
             String address = info.substring(info.length() - 17);
 
             // Make an intent to start next activity.
-            Intent i = new Intent(DeviceList.this, ledControl.class);
+            Intent i = new Intent(DeviceList.this, QuadroController.class);
 
             //Change the activity.
-            i.putExtra(EXTRA_ADDRESS, address); //this will be received at ledControl (class) Activity
+            i.putExtra(EXTRA_ADDRESS, address); //this will be received at QuadroController (class) Activity
             startActivity(i);
         }
     };

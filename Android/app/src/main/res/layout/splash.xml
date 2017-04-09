@@ -4,23 +4,15 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    android:background="#da4c3f">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="252dp"
-        android:id="@+id/imageView2"
-        android:src="@drawable/led"
-        android:layout_marginTop="135dp"
-        android:layout_gravity="center_horizontal" />
+    android:background="#2a86aa">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="LED Controller"
+        android:text="Quadro Controller"
         android:textSize="35dp"
-        android:layout_marginTop="15dp"
         android:id="@+id/textView3"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="15dp" />
 </LinearLayout>

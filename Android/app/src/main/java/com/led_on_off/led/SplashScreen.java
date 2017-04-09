@@ -18,9 +18,9 @@ public class SplashScreen extends Activity {
             public void run(){
                 try{
                     sleep(700);
-                }catch(InterruptedException e){
+                } catch(InterruptedException e){
                     e.printStackTrace();
-                }finally{
+                } finally{
                     Intent intent = new Intent(SplashScreen.this,DeviceList.class);
                     startActivity(intent);
                 }
@@ -35,5 +35,4 @@ public class SplashScreen extends Activity {
         super.onPause();
         finish();
     }
-
 }
