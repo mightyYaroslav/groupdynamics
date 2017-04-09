@@ -3,16 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:orientation="vertical"
-    android:background="#2a86aa">
+    android:background="#1a7294"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Quadro Controller"
         android:textSize="35dp"
         android:id="@+id/textView3"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="15dp" />
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

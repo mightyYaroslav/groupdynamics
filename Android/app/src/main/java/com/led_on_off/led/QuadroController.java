@@ -10,6 +10,7 @@ import android.bluetooth.BluetoothSocket;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -25,6 +26,7 @@ public class QuadroController extends ActionBarActivity {
     // Button btnOn, btnOff, btnDis;
     SeekBar seekBar;
     ImageButton Discnt;
+    TextView progressTextView;
     String address = null;
     private ProgressDialog progress;
     BluetoothAdapter myBluetooth = null;
@@ -44,7 +46,10 @@ public class QuadroController extends ActionBarActivity {
 
         //call the widgets
         seekBar = (SeekBar) findViewById(R.id.seekBar);
+        progressTextView = (TextView) findViewById(R.id.progressTextView);
         Discnt = (ImageButton) findViewById(R.id.discnt);
+
+
 
         new ConnectBT().execute(); //Call the class to connect
 
@@ -52,20 +57,16 @@ public class QuadroController extends ActionBarActivity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                Log.d("DEBUG", "Progress is: "+progress);
-                //set textView's text
-//                yourTextView.setText(""+progress);
+                progressTextView.setText(i + " / " + seekBar.getMax());
                 send(i);
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
 
@@ -86,26 +87,6 @@ public class QuadroController extends ActionBarActivity {
             }
         }
         finish(); //return to the first layout
-    }
-
-    private void turnOffLed() {
-        if (btSocket != null) {
-            try {
-                btSocket.getOutputStream().write("0".getBytes());
-            } catch (IOException e) {
-                msg("Error");
-            }
-        }
-    }
-
-    private void turnOnLed() {
-        if (btSocket != null) {
-            try {
-                btSocket.getOutputStream().write("1".getBytes());
-            } catch (IOException e) {
-                msg("Error");
-            }
-        }
     }
 
     private void send(int data) {
