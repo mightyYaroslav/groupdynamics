@@ -1,3 +1,5 @@
+#include <Servo.h>
+
 // I2C device class (I2Cdev) demonstration Arduino sketch for MPU6050 class using DMP (MotionApps v2.0)
 // 6/21/2012 by Jeff Rowberg <jeff@rowberg.net>
 // Updates should (hopefully) always be available at https://github.com/jrowberg/i2cdevlib
@@ -178,8 +180,32 @@ void dmpDataReady() {
 // ================================================================
 // ===                      INITIAL SETUP                       ===
 // ================================================================
+Servo motor1;
+Servo motor2;
+Servo motor3;
+Servo motor4;
 
 void setup() {
+    //motors
+    Serial.begin(9600);
+    motor1.attach(9);
+    motor2.attach(5);
+    motor3.attach(6);
+    motor4.attach(3);
+    
+    motor1.writeMicroseconds(2200); 
+    motor2.writeMicroseconds(2200); 
+    motor3.writeMicroseconds(2200); 
+    motor4.writeMicroseconds(2200); 
+    delay(2000);
+    motor1.writeMicroseconds(800); 
+    motor2.writeMicroseconds(800); 
+    motor3.writeMicroseconds(800); 
+    motor4.writeMicroseconds(800); 
+    delay(6000);
+
+    
+    
     // join I2C bus (I2Cdev library doesn't do this automatically)
     #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
         Wire.begin();
@@ -265,8 +291,8 @@ void setup() {
     pitchPID.SetMode(AUTOMATIC);
     rollPID.SetMode(AUTOMATIC);   
     
-    pitchPID.SetOutputLimits(-30, 30);
-    rollPID.SetOutputLimits(-30, 30);
+    pitchPID.SetOutputLimits(-40, 40);
+    rollPID.SetOutputLimits(-40, 40);
 
 }
 
@@ -293,21 +319,21 @@ void loop() {
           int p3 = spd + (rdif / 2) - (pdif / 2);
           int p4 = spd - (rdif / 2) - (pdif / 2);
           
-          if(p1 >= 255){
+          if(p1 >= 300){
             //reduce speed so can stabalize
-            spd -= (p1 - 255);
+            spd -= (p1 - 300);
             continue;
           }
-          if(p2 >= 255){
-            spd -= (p2 - 255);
+          if(p2 >= 300){
+            spd -= (p2 - 300);
             continue;
           }
-          if(p3 >= 255){
-            spd -= (p3 - 255);
+          if(p3 >= 300){
+            spd -= (p3 - 300);
             continue;
           }
-          if(p4 >= 255){
-            spd -= (p4 - 255);
+          if(p4 >= 300){
+            spd -= (p4 - 300);
             continue;
           }
         
@@ -315,14 +341,19 @@ void loop() {
 //          analogWrite(prop2, p2);
 //          analogWrite(prop3, p3);
 //          analogWrite(prop4, p4);
+
+          motor1.writeMicroseconds(map(p1,200, 300,800,1500)); 
+          motor2.writeMicroseconds(map(p2,200, 300,800,1500)); 
+          motor3.writeMicroseconds(map(p3,200, 300,800,1500)); 
+          motor4.writeMicroseconds(map(p4,200, 300,800,1500)); 
           
           Serial.print("p1:\t");
           Serial.print(p1);
-          Serial.print("p2:\t");
+          Serial.print(" p2:\t");
           Serial.print(p2);
-          Serial.print("p4:\t");
+          Serial.print(" p3:\t");
           Serial.print(p3);
-          Serial.print("p4:\t");
+          Serial.print(" p4:\t");
           Serial.println(p4);
 
          
