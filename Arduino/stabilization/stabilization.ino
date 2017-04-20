@@ -185,9 +185,37 @@ Servo motor2;
 Servo motor3;
 Servo motor4;
 
+int read_int()
+{
+ static byte c;
+ static int i;
+
+ i = 0;
+ while (1)
+ {
+   while (!Serial.available()) {}
+
+   c = Serial.read(); 
+ 
+   if (c == '\n')
+   {
+     return i;
+   }
+   if (isdigit(c))
+   {
+     i = i * 10 + c - '0';
+   }
+   else
+   {
+     Serial.print("\nERROR: \"");
+     Serial.print("\" is not a digit\n");
+     return -1;
+   }
+ }
+}
+
 void setup() {
     //motors
-    Serial.begin(9600);
     motor1.attach(9);
     motor2.attach(5);
     motor3.attach(6);
@@ -237,7 +265,6 @@ void setup() {
     // wait for ready
     Serial.println(F("\nSend any character to begin DMP programming and demo: "));
     while (Serial.available() && Serial.read()); // empty buffer
-    while (!Serial.available());                 // wait for data
     while (Serial.available() && Serial.read()); // empty buffer again
 
     // load and configure the DMP
@@ -245,12 +272,13 @@ void setup() {
     devStatus = mpu.dmpInitialize();
 
     // supply your own gyro offsets here, scaled for min sensitivity
-    mpu.setXAccelOffset(-4097);
-    mpu.setYAccelOffset(-1178);
-    mpu.setZAccelOffset(1751);
-    mpu.setXGyroOffset(138);
-    mpu.setYGyroOffset(47);
-    mpu.setZGyroOffset(206);
+    mpu.setXAccelOffset(-4118);
+    mpu.setYAccelOffset(-1128);
+    mpu.setZAccelOffset(1757);
+    mpu.setXGyroOffset(114);
+    mpu.setYGyroOffset(0);
+    mpu.setZGyroOffset(225);
+
 
     // make sure it worked (returns 0 if so)
     if (devStatus == 0) {
@@ -307,9 +335,14 @@ const int prop4 = 3;
 // ================================================================
 // ===                    MAIN PROGRAM LOOP                     ===
 // ================================================================
+int number;
 
 void loop() {
     // if programming failed, don't try to do anything
+    // number = read_int();  
+     Serial.println( number);
+
+    
     if (!dmpReady) return;
 
     // wait for MPU interrupt or extra packet(s) available
@@ -342,10 +375,10 @@ void loop() {
 //          analogWrite(prop3, p3);
 //          analogWrite(prop4, p4);
 
-          motor1.writeMicroseconds(map(p1,200, 300,800,1500)); 
-          motor2.writeMicroseconds(map(p2,200, 300,800,1500)); 
-          motor3.writeMicroseconds(map(p3,200, 300,800,1500)); 
-          motor4.writeMicroseconds(map(p4,200, 300,800,1500)); 
+          motor1.writeMicroseconds(map(p1,180, 300,1100,1300)); 
+          motor2.writeMicroseconds(map(p2,180, 300,1100,1300)); 
+          motor3.writeMicroseconds(map(p3,180, 300,1100,1300)); 
+          motor4.writeMicroseconds(map(p4,180, 300,110,1300)); 
           
           Serial.print("p1:\t");
           Serial.print(p1);
@@ -403,14 +436,14 @@ void loop() {
         pitch = (ypr[1] * 180/M_PI);
         roll = (ypr[2] * 180/M_PI);
             
-//        #ifdef OUTPUT_READABLE_YAWPITCHROLL
-//            Serial.print("ypr\t");
-//            Serial.print(ypr[0] * 180/M_PI);
-//            Serial.print("\t");
-//            Serial.print(pitch);
-//            Serial.print("\t");
-//            Serial.println(roll);
-//        #endif
+        #ifdef OUTPUT_READABLE_YAWPITCHROLL
+            Serial.print("ypr\t");
+            Serial.print(ypr[0] * 180/M_PI);
+            Serial.print("\t");
+            Serial.print(pitch);
+            Serial.print("\t");
+            Serial.println(roll);
+        #endif
 
         //Update Pids
         pitchPID.Compute();
