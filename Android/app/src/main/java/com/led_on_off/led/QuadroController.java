@@ -49,8 +49,6 @@ public class QuadroController extends ActionBarActivity {
         progressTextView = (TextView) findViewById(R.id.progressTextView);
         Discnt = (ImageButton) findViewById(R.id.discnt);
 
-
-
         new ConnectBT().execute(); //Call the class to connect
 
         //commands to be sent to bluetooth
@@ -58,6 +56,7 @@ public class QuadroController extends ActionBarActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 progressTextView.setText(i + " / " + seekBar.getMax());
+                Log.d(String.valueOf(i), "OnChanged: ");
                 send(i);
             }
 
@@ -92,7 +91,7 @@ public class QuadroController extends ActionBarActivity {
     private void send(int data) {
         if (btSocket != null) {
             try {
-                btSocket.getOutputStream().write(String.valueOf(data).getBytes());
+                btSocket.getOutputStream().write(String.valueOf(data).concat("\n").getBytes());
             } catch (IOException e) {
                 msg("Error");
             }
@@ -155,6 +154,7 @@ public class QuadroController extends ActionBarActivity {
             super.onPostExecute(result);
             if (!ConnectSuccess) {
                 msg("Connection Failed. Is it a SPP Bluetooth? Try again.");
+                finish();
                 finish();
             } else {
                 msg("Connected.");
