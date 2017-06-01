@@ -19,5 +19,6 @@
 #### [Sprint 1 backlog](https://docs.google.com/spreadsheets/d/1Yqve_qR6Hki9nNlhjcWFcE_GF3z_n2zPZgJp58jflO0/edit?usp=sharing)
 #### [Sprint 2 backlog](https://docs.google.com/spreadsheets/d/1EGxsffErbdMvMyFfQsN_1_sqIkdcOyj86LbEgYYts8o/edit?usp=sharing)
 #### [Sprint 2 Demo](https://docs.google.com/presentation/d/1L9P7i2Uv08uylp-fbjiXaKtGyI8la1JabGlaBPyoD5Q/edit?hl=en#slide=id.p)
+#### [Sprint 3 Demo](https://docs.google.com/presentation/d/1QxMHOQNSyRc17wXhdpytTopbQcKwOEYNbNx_nmyZPtw/edit#slide=id.g1e301f4a07_0_0)
 #### [Demo Video](https://youtu.be/woj_TesdxYc)
 #### [Documentation](https://docs.google.com/document/d/1PNSYb37h-x5DXA_Z4SIMBPN4RbjDRPmaXmCKiWxZ3oM/edit?usp=sharing)
